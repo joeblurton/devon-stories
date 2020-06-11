@@ -1,12 +1,14 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "devon-stories",
+  "description": "Gatsby and Netlify CMS blog about Devon",
+  "version": "0.1",
+  "author": "Joe Blurton",
   "dependencies": {
+    "axios": "^0.19.2",
     "bulma": "^0.8.0",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
+    "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-purgecss": "^5.0.0",
@@ -44,6 +46,10 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ],
   "devDependencies": {
     "prettier": "^2.0.5"
   }
