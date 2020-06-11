@@ -8,6 +8,9 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+# when using the default proxy server port
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
