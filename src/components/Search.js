@@ -12,8 +12,8 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div>
-                <input type="text" value={this.state.query} onChange={this.search} />
+            <div className="navbar-item">
+                <input type="text" className="input is-small" value={this.state.query} onChange={this.search} placeholder="Search..." />
                 <ul>{this.state.results.map(page => <li>{page.title}</li>)}</ul>
             </div>
         )
