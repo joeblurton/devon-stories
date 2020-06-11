@@ -1,7 +1,7 @@
 {
   "name": "devon-stories",
   "description": "Gatsby and Netlify CMS blog about Devon",
-  "version": "0.1",
+  "version": "0.0.1",
   "author": "Joe Blurton",
   "dependencies": {
     "axios": "^0.19.2",
