@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Devon Stories
 image: /img/home-jumbotron.jpg
-heading: Devon Stories
+heading: Devon Stories and Stones
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
