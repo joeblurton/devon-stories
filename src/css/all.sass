@@ -1,0 +1,75 @@
+@import "~bulma/sass/utilities/initial-variables"
+//@import "fonts"
+
+@font-face
+    font-family: 'made_mirage_regular'
+    src: #{url('made_mirage_regular-webfont.woff2') format('woff2'), url('made_mirage_regular-webfont.woff') format('woff')}
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'made_mirage_medium'
+    src: #{url('made_mirage_medium-webfont.woff2') format('woff2'), url('made_mirage_medium-webfont.woff') format('woff')}
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'made_mirage_bold'
+    src: #{url('made_mirage_bold-webfont.woff2') format('woff2'), url('made_mirage_bold-webfont.woff') format('woff')}
+    font-weight: bold
+    font-style: normal
+
+@font-face
+    font-family: 'made_sunflower'
+    src: #{url('made_sunflower-webfont.woff2') format('woff2'), url('made_sunflower-webfont.woff') format('woff')}
+    font-weight: normal
+    font-style: normal
+
+// Fonts
+$family-sans-serif: made_mirage_medium
+$sunflower: made_sunflower
+
+h1,h2,h3,h4,h5,h6
+    font-family: $sunflower
+
+// Colours
+$kaldi-red: #D64000
+$kaldi-red-invert: #fff
+$paper: #FFF1E9
+
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+$body-color: #333
+$body-background-color: $paper
+$black: #2b2523
+
+@import "~bulma"
+
+// Overrides
+
+body
+    font-size: 1.1em
+    font-weight: 600
+
+.section
+    padding: 2.5rem 3rem
+
+.content p:not(:last-child), .content ul:not(:last-child)
+    margin-bottom: 0.66em
+
+.box:not(:last-child), 
+.content:not(:last-child),
+.notification:not(:last-child), 
+.title:not(:last-child), 
+.subtitle:not(:last-child), 
+.message:not(:last-child)
+    margin-bottom: 1.45rem
+
+.content h2:not(:first-child)
+    margin-top: 0.8em
+
+// Layout component
+
+nav.navbar
+    background: $paper
+    
