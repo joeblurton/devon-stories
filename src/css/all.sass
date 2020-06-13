@@ -33,12 +33,13 @@ h1,h2,h3,h4,h5,h6
     font-family: $sunflower
 
 // Colours
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$devon-green: #028c40
+$darkest-devon: #154432 
+$devon-invert: #fff
 $paper: #FFF1E9
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $devon-green
+$primary-invert: $devon-invert
 $body-color: #333
 $body-background-color: $paper
 $black: #2b2523
@@ -53,6 +54,21 @@ body
 
 .section
     padding: 2.5rem 3rem
+
+a
+    color: $devon-green
+    text-decoration: underline
+
+a:hover
+    color: $darkest-devon
+
+a.navbar-item
+    text-decoration: none
+    color: $darkest-devon
+
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
+    background-color: #fafafa
+    color: $devon-green
 
 .content p:not(:last-child), .content ul:not(:last-child)
     margin-bottom: 0.66em
