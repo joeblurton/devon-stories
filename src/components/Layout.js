@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Brand from '../components/Brand'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../css/all.sass'
@@ -33,7 +34,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
+      <Brand />
       <div id="wrapper">{children}</div>
+      <Footer />
       <Navbar />
     </div>
   )

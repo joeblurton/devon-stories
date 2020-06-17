@@ -4,30 +4,6 @@ module.exports = {
         description: 'Tales from deepest Devonshire.',
     },
     plugins: [
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sass',
-        {
-            // keep as first gatsby-source-filesystem plugin for gatsby image support
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/static/img`,
-                name: 'uploads',
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/src/pages`,
-                name: 'pages',
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/src/img`,
-                name: 'images',
-            },
-        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
@@ -57,6 +33,30 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sass',
+        {
+            // keep as first gatsby-source-filesystem plugin for gatsby image support
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/static/img`,
+                name: 'uploads',
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/pages`,
+                name: 'pages',
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/img`,
+                name: 'images',
+            },
+        },
         {
             resolve: `gatsby-plugin-lunr`,
             options: {
@@ -84,6 +84,10 @@ module.exports = {
                         name: 'tags',
                         store: true
                     },
+                    {
+                        name: 'slug',
+                        store: true
+                    },
                 ],
                 // How to resolve each field's value for a supported node type
                 resolvers: {
@@ -91,7 +95,7 @@ module.exports = {
                     MarkdownRemark: {
                         title: node => node.frontmatter.title,
                         content: node => node.rawMarkdownBody,
-                        url: node => node.fields.url,
+                        slug: node => node.fields.slug,
                     },
                 },
                 //custom index file name, default is search_index.json
