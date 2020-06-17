@@ -1,24 +1,16 @@
 ---
 templateKey: about-page
 path: /about
-title: About our values
+title: About Devon Stories
 ---
-### Shade-grown cheesy 
+I started Devon Stories in the summer of 2020 to showcase Devon’s rich cultural and natural heritage. I’d like to talk a little about what motivated me.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+I first came to Devon to study Archaeology at the University of Exeter, already deeply in love with the place. I grew up in Somerset, arguably a beautiful place in it’s own right. Somehow, however, I felt restless. Perhaps I equated the flatness of Somerset with dullness.
 
-### Single origin
+From the moment I could drive I took every opportunity to pootle over the Blackdown Hills, exploring Devon in my beloved old Morris Minor. This often seemed a challenging, epic journey, although that’s hard to believe now! I camped out with friends, joined sing-alongs in the folk clubs that scatter the county, met many wonderful people, and decided that Devon was where I wanted to be.
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Later I learnt that my mother’s family had roots in Devon. Many of the living members all migrated across the Blackdowns at the same time over a decade ago, and I have come to believe that, as a tribe, we simply belong here. 
 
-### Sustainable farming
+Devon feels more homely than any other place I’ve been to in the world, and I find new hidden treasures every day. There is so much heritage per-square-mile that the county constantly rewards my curiosity. 
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+The fruits of that curiosity are what I wanted to share in this very irregular online magazine. It’s intended to highlight those interesting little details that might otherwise disappear out of the corner of your eye as you drive past on a lazy Sunday morning. I hope it delights you as much as Devon delights me.
