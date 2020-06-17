@@ -43,21 +43,21 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '60px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: '64px' }} />
             </Link>
-            <div className="navbar-end has-text-centered">
+          </div>
+          <div className="navbar-end has-text-centered">
               <Search lng={lng} />
-            </div>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
+              {/* Hamburger menu */}
+              <div
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => this.toggleHamburger()}
+              >
+                <span />
+                <span />
+                <span />
+              </div>
           </div>
           <div
             id="navMenu"

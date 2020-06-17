@@ -5,13 +5,41 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg8"
    version="1.1"
    viewBox="0 0 35.324696 17.700377"
-   height="17.700377mm"
-   width="35.324696mm">
+   height="66.899063"
+   width="133.51067">
   <defs
      id="defs2" />
+  <sodipodi:namedview
+     units="px"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="text12"
+     inkscape:document-units="mm"
+     inkscape:cy="103.66072"
+     inkscape:cx="35.144937"
+     inkscape:zoom="0.7"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -26,7 +54,9 @@
   </metadata>
   <g
      transform="translate(-27.220117,-81.794068)"
-     id="layer1">
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <g
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0.95;font-family:sans-serif;fill:#545454;fill-opacity:1;stroke:none;stroke-width:0.264583"
        id="text12"
@@ -34,23 +64,23 @@
 Stories">
       <path
          id="path845"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#355454;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#028c40;fill-opacity:1;stroke-width:0.264583"
          d="m 30.69619,81.794068 q 2.21191,0 3.386656,1.005413 1.18533,1.005414 1.18533,2.698741 0,1.693328 -1.18533,2.698742 -1.174746,1.005413 -3.386656,1.005413 h -3.270239 v -0.285749 q 0.99483,0 0.99483,-1.217079 v -4.39207 q 0,-1.217079 -0.99483,-1.217079 v -0.296332 z m -0.04233,6.995561 q 2.741075,0 2.741075,-3.291407 0,-3.280822 -2.741075,-3.280822 h -0.444498 v 6.572229 z" />
       <path
          id="path847"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#355454;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#028c40;fill-opacity:1;stroke-width:0.264583"
          d="m 40.705677,87.540799 q 0.179916,0.137583 0.179916,0.148166 -0.296332,0.687915 -0.910164,1.15358 -0.603248,0.455082 -1.502828,0.455082 -1.164163,0 -1.926161,-0.656165 -0.751414,-0.656164 -0.836081,-1.640411 -0.105833,-1.238246 0.687915,-1.968494 0.793747,-0.730247 2.031993,-0.730247 1.09008,0 1.725078,0.571498 0.634998,0.560915 0.592665,1.587495 l -3.27024,0.550331 q 0.116417,0.656165 0.719665,0.963081 0.613831,0.306915 1.333496,0.190499 0.719664,-0.127 1.174746,-0.624415 z m -2.465909,-2.857491 q -0.486832,0.04233 -0.709081,0.592665 -0.211666,0.539748 -0.116416,1.322913 l 1.735661,-0.296333 q 0.04233,-0.804331 -0.179916,-1.227663 -0.211666,-0.433915 -0.730248,-0.391582 z" />
       <path
          id="path849"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#355454;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#028c40;fill-opacity:1;stroke-width:0.264583"
          d="m 44.697566,84.408143 h 1.86266 v 0.285749 q -0.370415,0 -0.582081,0.169332 -0.201083,0.169333 -0.338666,0.518582 l -1.534578,3.820571 H 43.39582 l -1.725078,-3.820571 q -0.127,-0.264582 -0.211666,-0.380999 -0.07408,-0.116416 -0.243416,-0.211666 -0.169333,-0.09525 -0.423332,-0.09525 v -0.285749 h 3.100907 v 0.285749 q -0.359832,0 -0.465665,0.148166 -0.09525,0.148166 0.04233,0.539748 l 0.920747,2.158993 0.86783,-2.158993 q 0.148167,-0.433915 0.02117,-0.560915 -0.127,-0.126999 -0.582081,-0.126999 z" />
       <path
          id="path851"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#355454;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#028c40;fill-opacity:1;stroke-width:0.264583"
          d="m 49.106833,84.30231 q 1.195913,0 1.968494,0.698497 0.772581,0.687915 0.772581,1.799161 0,1.111247 -0.772581,1.809745 -0.772581,0.687914 -1.968494,0.687914 -1.206496,0 -1.979077,-0.687914 -0.772581,-0.698498 -0.772581,-1.809745 0,-1.111246 0.772581,-1.799161 0.772581,-0.698497 1.979077,-0.698497 z m 0.359832,4.582568 q 0.476249,-0.08467 0.645581,-0.698497 0.169333,-0.613832 0,-1.566329 -0.169332,-0.96308 -0.539748,-1.471078 -0.359832,-0.518582 -0.836081,-0.433916 -0.476248,0.08467 -0.645581,0.698498 -0.158749,0.613831 0.01058,1.566328 0.169333,0.952497 0.529165,1.471079 0.359833,0.507998 0.836081,0.433915 z" />
       <path
          id="path853"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#355454;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#028c40;fill-opacity:1;stroke-width:0.264583"
          d="m 58.497362,87.699549 q 0.03175,0.264582 0.05292,0.380999 0.02117,0.105833 0.08467,0.306915 0.0635,0.201083 0.148166,0.296333 0.09525,0.08467 0.264582,0.158749 0.169333,0.07408 0.402166,0.07408 v 0.285749 h -3.39724 v -0.285749 q 0.380999,0 0.560915,-0.169333 0.1905,-0.179916 0.201083,-0.444498 0.01058,-0.275166 -0.02117,-0.603248 -0.148166,-0.96308 -0.211666,-1.354663 -0.04233,-0.264582 -0.0635,-0.370415 -0.02117,-0.116416 -0.08467,-0.306916 -0.0635,-0.201082 -0.148166,-0.285749 -0.08467,-0.08467 -0.243416,-0.158749 -0.148166,-0.07408 -0.359832,-0.07408 -0.455082,0 -0.677331,0.349248 -0.22225,0.349249 -0.22225,0.920748 v 1.280579 q 0,0.603248 0.15875,0.910164 0.158749,0.306915 0.709081,0.306915 v 0.285749 h -3.481906 v -0.285749 q 0.550332,0 0.730248,-0.306915 0.179916,-0.317499 0.179916,-0.910164 v -1.068913 q 0,-0.592665 -0.179916,-0.899581 -0.179916,-0.317499 -0.730248,-0.317499 v -0.285749 q 0.518582,0 1.195913,-0.211666 0.687915,-0.222249 1.132413,-0.613831 h 0.285749 v 0.825497 q 0.592665,-0.825497 1.682745,-0.825497 0.804331,0 1.248829,0.455081 0.444499,0.455082 0.582082,1.449913 z" />
       <path
          id="path855"
@@ -67,11 +97,11 @@ Stories">
       <path
          id="path861"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#545454;fill-opacity:1;stroke-width:0.264583"
-         d="m 47.265999,94.490858 q 0.550332,0.09525 0.772581,0.529165 0.232833,0.423332 0.05292,0.89958 -0.169332,0.423332 -0.560914,0.560915 -0.380999,0.137583 -0.687915,0.02117 0.222249,-0.783164 -0.306916,-0.96308 -0.359832,-0.105833 -0.613831,0.0635 -0.253999,0.169333 -0.285749,0.529165 v 1.756828 q 0,0.603248 0.158749,0.910164 0.15875,0.306915 0.709082,0.306915 v 0.285749 h -3.492489 v -0.285749 q 0.560915,0 0.730247,-0.306915 0.179916,-0.317499 0.179916,-0.910164 v -1.068914 q 0,-0.592664 -0.179916,-0.89958 -0.169332,-0.317499 -0.730247,-0.317499 v -0.285749 q 0.529165,0 1.206496,-0.211666 0.687914,-0.222249 1.132413,-0.613831 h 0.285749 v 0.952497 q 0.592665,-1.12183 1.629828,-0.952497 z" />
+         d="m 47.265999,94.490858 q 0.550332,0.09525 0.772581,0.529165 0.232833,0.423332 0.05292,0.89958 -0.169332,0.423332 -0.560914,0.560915 -0.380999,0.137583 -0.687915,0.02117 0.222249,-0.783164 -0.306916,-0.96308 -0.359832,-0.105833 -0.613831,0.0635 -0.253999,0.169333 -0.285749,0.529165 v 1.756828 q 0,0.603248 0.158749,0.910164 0.15875,0.306915 0.709082,0.306915 v 0.285749 H 43.011517 V 99.10518 q 0.560915,0 0.730247,-0.306915 0.179916,-0.317499 0.179916,-0.910164 v -1.068914 q 0,-0.592664 -0.179916,-0.89958 -0.169332,-0.317499 -0.730247,-0.317499 v -0.285749 q 0.529165,0 1.206496,-0.211666 0.687914,-0.222249 1.132413,-0.613831 h 0.285749 v 0.952497 q 0.592665,-1.12183 1.629828,-0.952497 z" />
       <path
          id="path863"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#545454;fill-opacity:1;stroke-width:0.264583"
-         d="m 51.206625,97.888097 q 0,0.296332 0.02117,0.486832 0.03175,0.179916 0.105833,0.370415 0.08467,0.179916 0.264582,0.275166 0.1905,0.08467 0.486832,0.08467 v 0.285749 H 48.59255 v -0.285749 q 0.550332,0 0.730248,-0.306915 0.179916,-0.317499 0.179916,-0.910164 v -1.068914 q 0,-0.592664 -0.179916,-0.89958 -0.179916,-0.317499 -0.730248,-0.317499 v -0.285749 q 0.529165,0 1.206496,-0.211666 0.687915,-0.222249 1.12183,-0.613831 h 0.285749 z M 50.920876,93.69711 q -0.306916,0.296332 -0.740831,0.296332 -0.433915,0 -0.751414,-0.296332 -0.306916,-0.296332 -0.306916,-0.709081 0,-0.412749 0.306916,-0.709081 0.317499,-0.296332 0.751414,-0.296332 0.433915,0 0.740831,0.296332 0.317499,0.296332 0.317499,0.709081 0,0.412749 -0.317499,0.709081 z" />
+         d="m 51.206625,97.888097 q 0,0.296332 0.02117,0.486832 0.03175,0.179916 0.105833,0.370415 0.08467,0.179916 0.264582,0.275166 0.1905,0.08467 0.486832,0.08467 v 0.285749 H 48.59255 V 99.10518 q 0.550332,0 0.730248,-0.306915 0.179916,-0.317499 0.179916,-0.910164 v -1.068914 q 0,-0.592664 -0.179916,-0.89958 -0.179916,-0.317499 -0.730248,-0.317499 v -0.285749 q 0.529165,0 1.206496,-0.211666 0.687915,-0.222249 1.12183,-0.613831 h 0.285749 z M 50.920876,93.69711 q -0.306916,0.296332 -0.740831,0.296332 -0.433915,0 -0.751414,-0.296332 -0.306916,-0.296332 -0.306916,-0.709081 0,-0.412749 0.306916,-0.709081 0.317499,-0.296332 0.751414,-0.296332 0.433915,0 0.740831,0.296332 0.317499,0.296332 0.317499,0.709081 0,0.412749 -0.317499,0.709081 z" />
       <path
          id="path865"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'MADE Sunflower';-inkscape-font-specification:'MADE Sunflower';fill:#545454;fill-opacity:1;stroke-width:0.264583"
@@ -90,6 +120,7 @@ Stories">
          style="stroke-width:0.264583"
          y="89.202377"
          x="147.03275"
-         id="tspan841" /></text>
+         id="tspan841"
+         sodipodi:role="line" /></text>
   </g>
 </svg>
