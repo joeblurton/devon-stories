@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Devon St
+title: Devon Stories
 image: /img/home-jumbotron.jpg
 heading: Devon Stories
 subheading: Support sustainable farming while enjoying a cup
