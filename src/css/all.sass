@@ -36,15 +36,27 @@ h1,h2,h3,h4,h5,h6
 $devon-green: #028c40
 $darkest-devon: #154432 
 $devon-invert: #fff
-$devon-neu-highlight: #dac8b7
-$devon-neu-dark: #74726d
-$paper: #FFF1E9
+$devon-neu-highlight: #FFCD99
+$devon-neu-highlighter: #FFD4A6
+$devon-neu-dark: #DCA267
+$devon-neu-darker: #976F46
+$paper: #ffbc77
+$light-paper: #FFF3E6
+$borders: #D9A874
+$border-hint: #FFD4A8
+$red: #B3354F
+$cyan: #78DFFF
+$blue: #3094B3
+$green: $devon-green
+$yellow: #FFDF5B
+$peach: #FF8A6B
 
 $primary: $devon-green
 $primary-invert: $devon-invert
 $body-color: #333
-$body-background-color: $paper
-$black: #2b2523
+$text: $body-color
+$body-background-color: $light-paper
+$black: #402F1E
 
 @import "~bulma"
 
@@ -55,34 +67,40 @@ body
     font-weight: 600
 
 .section
-    padding: 2.5rem 3rem
+    padding: 1.5rem 1rem
 
 a, .content a h2
     color: $devon-green
     text-decoration: underline
     -webkit-transition: color 1s
-    transition: color 1s
-    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0)
+    transition: color 0.75s
 
 a:hover
-    color: $darkest-devon
+    color: $black
 
 .content a h2
     font-weight: 400
 
     &:hover
-        color: $darkest-devon
+        color: $black
 
 a.navbar-item
     text-decoration: none
-    color: $darkest-devon
+    color: $black
 
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
     background-color: #fafafa
-    color: $devon-green
+    color: $black
 
 .content p:not(:last-child), .content ul:not(:last-child)
-    margin-bottomottom: 0.66em
+    margin-bottom: 0.66em
+
+.colour-peach
+    background-color: $peach
+    background: $peach
+
+.text-peach
+    color: $peach
 
 .box:not(:last-child), 
 .content:not(:last-child),
@@ -90,7 +108,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .title:not(:last-child), 
 .subtitle:not(:last-child), 
 .message:not(:last-child)
-    margin-bottomottom: 1.45rem
+    margin-bottom: 1.45rem
 
 .content h2:not(:first-child)
     margin-topop: 0.8em
@@ -101,13 +119,16 @@ nav.navbar
     background: $paper
 
 nav.is-fixed-bottom
-    box-shadow:  0px 10px 20px $devon-neu-dark, 0px -10px 20px $devon-neu-highlight
+    box-shadow: 0 -1px 1px $border-hint
 
 .navbar > .container,
 .navbar-brand 
     min-height: 4rem
 
 // Brand
+header
+    background-color: $paper
+
 header img.over-the-top
     width: 160px
     height: 160px
@@ -132,8 +153,9 @@ header img.over-the-top
 
         .input
             background-color: $paper
-            box-shadow: inset 4px 4px 4px $devon-neu-dark, inset -4px -4px 4px $devon-neu-highlight
-            border-color: $devon-neu-highlight
+            border-radius: 8px
+            box-shadow: inset 4px 4px 4px $devon-neu-dark, inset -4px -4px 4px $devon-neu-highlighter
+            border-color: rgba(255,255,255,0)
             outline: none
             -webkit-appearance: none
             -webkit-tap-highlight-color: $devon-invert
@@ -147,24 +169,27 @@ header img.over-the-top
                 //border-color: $black
 
             &::-webkit-input-placeholder
-                color: $devon-neu-dark
+                color: $devon-neu-darker
 
             &::-moz-placeholder
-                color: $devon-neu-dark
+                color: $devon-neu-darker
 
             &:-ms-input-placeholder
-                color: $devon-neu-dark
+                color: $devon-neu-darker
 
             &:-moz-placeholder
-                color: $devon-neu-dark
+                color: $devon-neu-darker
 
         .input.delete-button-shown
             border-top-right-radius: 0px
+            border-top-left-radius: 0px
             border-bottom-right-radius: 0px
 
         button.delete-button
             display: none
             border-top-left-radius: 0px
+            border-top-right-radius: 0px
+            border-bottom-right-radius: 8px
             border-bottom-left-radius: 0px
 
             &.is-active
@@ -175,6 +200,7 @@ header img.over-the-top
             display: none
             position: absolute
             top: -2.8em
+            left: 0.8rem
             background: #363636
             width: calc(100% - 0.70em)
             padding: 0.6em
@@ -214,6 +240,46 @@ header img.over-the-top
     height: 2px
     left: calc(50% - 10px)
     width: 20px
+
+// Page
+
+div#wrapper
+    background-color: $light-paper
+
+// BlogRoll
+
+/*section.blog-section .box
+    background-color: $paper*/
+
+// Footer
+
+.footer
+    background-color: $light-paper
+
+// Elements
+
+.pill
+    border-radius: 2.5rem
+    padding: 10px 20px 8px 20px
+    line-height: 1.1
+    text-align: center
+    display: inline-block
+    margin: 20px
+
+    *
+        width: auto
+        display: inline
+        text-align: center
+
+.neu-sheet
+    box-shadow: -3px -3px 3px $devon-neu-highlighter, 3px 3px 3px $devon-neu-darker
+
+.neu-hillock
+    box-shadow: -5px -5px 5px $devon-neu-highlight, 5px 5px 5px $devon-neu-dark
+
+.neu-tray
+    border-radius: 20px
+    box-shadow: inset 10px 10px 10px $devon-neu-dark, inset -10px -10px 10px $devon-neu-highlight
 
 // Helpers
 
@@ -609,6 +675,16 @@ header img.over-the-top
 
 // Reponsive
 
+@media screen and (max-width: 768px)
+
+    header
+
+        .columns
+            margin: 0
+
+        .column
+            padding: 0
+
 @media screen and (min-width: 1024px)
     
     .navbar 
@@ -619,7 +695,23 @@ header img.over-the-top
 
         .input
             font-size: 1rem
+            padding-top: calc(0.5em + 1px)
+            padding-left: calc(0.75em + 1px)
+
+        .delete-button
+            line-height: 1.25em
+            height: 2em
+            
+            .icon
+                height: 1em
+                width: 1em
+
+        ul.results
+            top: -2.5em
     
     header img.over-the-top
         width: 200px
         height: 200px
+
+    .section
+        padding: 2.5rem 3rem

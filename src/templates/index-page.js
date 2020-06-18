@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import useScript from '../hooks/useScript';
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import PhotoRoll from '../components/PhotoRoll' 
 
 export const IndexPageTemplate = ({
   image,
@@ -13,91 +15,62 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-topop-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `center center`,
-        backgroundSize: `cover`,
-        backgroundRepeat: `no-repeat`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '400px',
-          height: '40vh',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: '#024e8c',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: '#024e8c',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
+}) => {
+    useScript('https://cdn.lightwidget.com/widgets/lightwidget.js');
+
+    return (
+        <div>
+            <section className="section section--gradient blog-section">
+                <div className="container">
+                    <div className="columns">
+                        <div className="column is-two-thirds-tablet">
+                            <div className="column is-12 p-0">
+                                <h3 className="has-text-weight-semibold is-size-3 m-b-0">
+                                    Stories
+                                </h3>
+                            </div>
+                            <div className="column is-12 p-0">
+                                <div className="column is-12 p-0">
+                                    <BlogRoll/>
+                                </div>
+                                <div className="column is-12 has-text-centered">
+                                    <Link className="btn" to="/blog">
+                                        Read more
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="column is-one-third-tablet">
+                            <div className="column is-12 p-0">
+                                <h3 className="has-text-weight-semibold is-size-3 m-b-0">
+                                    Photos
+                                </h3>
+                            </div>
+                            <div className="column is-12 p-0">
+                                <PhotoRoll/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column is-12">
+                            <section>
+                                {/* LightWidget WIDGET */}
+                                <iframe 
+                                    src="//lightwidget.com/widgets/dd6d047a9611578e836f6a8daa2a1052.html"
+                                    title="lightwidget"
+                                    scrolling="no" 
+                                    allowtransparency="true" 
+                                    className="lightwidget-swidget" 
+                                    style={{width:"100%",border: '0',overflow: 'hidden'}}
+                                ></iframe>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </section>
         </div>
-      </div>
-    </section>
-  </div>
-)
+    )
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

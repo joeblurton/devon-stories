@@ -26,7 +26,7 @@ const Brand = class extends React.Component {
                                 />
                             </Link>
                         </div>
-                        <div className="column is-3 social is-vcentered">
+                        <div className="column is-3 is-hidden-mobile social is-vcentered p-b-30 p-t-30">
                             <nav className="navbar">
                                 <a title="facebook" className="navbar-item" href="https://www.facebook.com/devonstoriesdotcom">
                                 <img

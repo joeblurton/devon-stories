@@ -52,3 +52,15 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "photo"
+    label: "Photo"
+    folder: "src/pages/photo"
+    create: true
+    slug: "photo-{{slug}}-{{day}}-{{month}}-{{year}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "photo"}
+      - {label: "Title", name: "title", widget: string}
+      - {label: "Photo", name: "photo", widget: string}
+      - {label: "Author", name: "author", widget: string}
+      - {label: "Caption", name: "caption", widget: string}
+      - {label: "Tags", name: "tags", widget: "list"}
