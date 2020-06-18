@@ -36,6 +36,8 @@ h1,h2,h3,h4,h5,h6
 $devon-green: #028c40
 $darkest-devon: #154432 
 $devon-invert: #fff
+$devon-neu-highlight: #dac8b7
+$devon-neu-dark: #74726d
 $paper: #FFF1E9
 
 $primary: $devon-green
@@ -98,6 +100,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 nav.navbar
     background: $paper
 
+nav.is-fixed-bottom
+    box-shadow:  0px 10px 20px $devon-neu-dark, 0px -10px 20px $devon-neu-highlight
+
 .navbar > .container,
 .navbar-brand 
     min-height: 4rem
@@ -124,6 +129,34 @@ header img.over-the-top
     
     .search-container
         flex: 1 1 auto
+
+        .input
+            background-color: $paper
+            box-shadow: inset 4px 4px 4px $devon-neu-dark, inset -4px -4px 4px $devon-neu-highlight
+            border-color: $devon-neu-highlight
+            outline: none
+            -webkit-appearance: none
+            -webkit-tap-highlight-color: $devon-invert
+
+            &:focus, &:hover, &:active
+                outline: none
+                -webkit-appearance: none
+                -webkit-tap-highlight-color: $devon-invert
+                background-color: lighten($paper, 3%)
+                box-shadow: inset 3px 3px 3px $devon-neu-dark, inset -3px -3px 3px $devon-neu-highlight
+                //border-color: $black
+
+            &::-webkit-input-placeholder
+                color: $devon-neu-dark
+
+            &::-moz-placeholder
+                color: $devon-neu-dark
+
+            &:-ms-input-placeholder
+                color: $devon-neu-dark
+
+            &:-moz-placeholder
+                color: $devon-neu-dark
 
         .input.delete-button-shown
             border-top-right-radius: 0px
@@ -582,7 +615,10 @@ header img.over-the-top
         min-height: 4.25rem
 
     .navbar-bottom .search-container
-            flex: 0 1 auto
+        flex: 0 1 auto
+
+        .input
+            font-size: 1rem
     
     header img.over-the-top
         width: 200px
