@@ -13,7 +13,7 @@ class PhotoRoll extends React.Component {
           photos.map(({ node: photo }) => (
             <div className="is-parent column is-12" key={photo.id}>
               <article className={`blog-list-item tile is-child notification box`}>
-                <header>
+                <div>
                   <p className="post-meta m-t-10">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -29,7 +29,7 @@ class PhotoRoll extends React.Component {
                       {photo.frontmatter.caption}
                     </span>
                   </p>
-                </header>
+                </div>
                 <p className="m-t-10">
                   <br />
                   <br />
