@@ -1,6 +1,7 @@
 import React from 'react'
 import RetinaImage from 'react-retina-image'
 import { Link } from 'gatsby'
+import logo from '../img/logo@2x.png'
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -19,9 +20,8 @@ const Brand = class extends React.Component {
                         </div>
                         <div className="column is-6 has-text-centered">
                             <Link to="/">
-                                <RetinaImage src={"/img/logo.png"} 
+                                <img src={logo} 
                                     alt="Devon Stories" 
-                                    checkIfRetinaImgExists={false}
                                     className="over-the-top"
                                 />
                             </Link>

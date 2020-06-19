@@ -6,6 +6,7 @@ import useScript from '../hooks/useScript';
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import PhotoRoll from '../components/PhotoRoll' 
+import FeaturedPost from '../components/FeaturedPost';
 
 export const IndexPageTemplate = ({
   image,
@@ -25,9 +26,9 @@ export const IndexPageTemplate = ({
                     <div className="columns">
                         <div className="column is-two-thirds-tablet">
                             <div className="column is-12 p-0">
-                                <h3 className="has-text-weight-semibold is-size-3 m-b-0">
-                                    Stories
-                                </h3>
+                                <div className="column is-12 p-0">
+                                    <FeaturedPost/>
+                                </div>
                             </div>
                             <div className="column is-12 p-0">
                                 <div className="column is-12 p-0">

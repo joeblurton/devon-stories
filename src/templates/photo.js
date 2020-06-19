@@ -23,9 +23,13 @@ export const PhotoTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{photo}</p>
-            <p>{author}</p>
-            <p>{caption}</p>
+            <div className="columns has-background-dark">
+                <div className="column is-10 is-offset-1">
+                    <img className="solo-photo" src={photo} alt={title}/>
+                    <p className="has-text-white has-text-weight-normal">&#169; {author}</p>
+                    <p className="has-text-white has-text-weight-normal">{caption}</p>
+                </div>
+            </div>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
