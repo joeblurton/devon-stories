@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import '../css/all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import "isomorphic-fetch"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
