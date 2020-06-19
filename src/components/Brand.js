@@ -1,5 +1,4 @@
 import React from 'react'
-import RetinaImage from 'react-retina-image'
 import { Link } from 'gatsby'
 import logo from '../img/logo@2x.png'
 

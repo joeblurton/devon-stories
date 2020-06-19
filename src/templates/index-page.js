@@ -24,13 +24,13 @@ export const IndexPageTemplate = ({
             <section className="section section--gradient blog-section">
                 <div className="container">
                     <div className="columns">
-                        <div className="column is-two-thirds-tablet">
-                            <div className="column is-12 p-0">
+                        <div className="column is-two-thirds-tablet no-padding-right-tablet">
+                            <div className="column is-12 no-padding-right-tablet">
                                 <div className="column is-12 p-0">
                                     <FeaturedPost/>
                                 </div>
                             </div>
-                            <div className="column is-12 p-0">
+                            <div className="column is-12">
                                 <div className="column is-12 p-0">
                                     <BlogRoll/>
                                 </div>
@@ -42,12 +42,18 @@ export const IndexPageTemplate = ({
                             </div>
                         </div>
                         <div className="column is-one-third-tablet">
-                            <div className="column is-12 p-0">
-                                <h3 className="has-text-weight-semibold is-size-3 m-b-0">
-                                    Photos
-                                </h3>
+                            <div className="column is-12 is-parent">
+                                <Link to="/contact/submissions" className="big-button big-button-link">
+                                    <div className="tile is-child box has-background-link">
+                                        <article className="media">
+                                            <div className="media-content">
+                                                <p className="is-size-3 has-text-white sunflower-medium">Submit a story</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </Link>
                             </div>
-                            <div className="column is-12 p-0">
+                            <div className="column is-12">
                                 <PhotoRoll/>
                             </div>
                         </div>

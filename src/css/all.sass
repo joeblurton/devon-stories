@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,h6
     font-family: $sunflower
 
 // Colours
-$devon-green: #028c40
+$devon-green: #028C40
 $darkest-devon: #154432 
 $devon-invert: #fff
 $devon-neu-highlight: #FFCD99
@@ -58,6 +58,9 @@ $text: $body-color
 $body-background-color: $paper
 $black: #402F1E
 
+// Animations
+$transition: 0.5s linear
+
 @import "~bulma"
 
 // Overrides
@@ -69,19 +72,36 @@ body
 .section
     padding: 1.5rem 1rem
 
+.sunflower-bold
+    font-family: $sunflower
+    font-weight: 600
+
+.sunflower-medium
+    font-family: $sunflower
+    font-weight: 400
+
 a, .content a h2
     color: $devon-green
     text-decoration: underline
-    -webkit-transition: color 1s
-    transition: color 0.75s
+    -webkit-transition: color $transition
+    transition: color $transition
+
+.no-decoration
+    text-decoration: none
+
+.is-line-height-equal
+    line-height: 1
 
 a:hover
     color: $black
 
+button, .button
+    transition: background-color $transition
+
 .content a h2
     font-weight: 400
 
-    &:hover
+    &:focus, &:hover, &:active
         color: $black
 
 a.navbar-item
@@ -246,10 +266,112 @@ header img.over-the-top
 div#wrapper
     background-color: $dark-paper
 
+.big-button
+    text-decoration: none
+
+.big-button.big-button-link
+
+    .box
+        padding: 2rem 1.25rem 0 0.5rem
+
+    &:hover, &:focus, &:active
+        
+        .has-background-link
+            transition: background-color $transition
+            background-color: darken($blue, 3%) !important
+
+
 // BlogRoll
 
 /*section.blog-section .box
     background-color: $dark-paper*/
+
+// PhotoRoll
+.square-link
+
+    .square
+        background-repeat: no-repeat
+        background-size: cover
+        transition: all $transition
+        width: 100%
+        position: relative
+        padding: 1.25rem 0 0
+    
+        &:after
+            content: ""
+            display: block
+            padding-bottom: 100%
+
+        .photo-byline
+            position: absolute
+            width: 100%
+            bottom: 0
+            backdrop-filter: blur(10px)
+            border-top: 1px solid rgba(0, 0, 0, 0.15)
+            transition: all $transition
+            background-color: rgba(0, 0, 0, 0.1)
+            padding: 0.5rem
+            border-bottom-right-radius: 6px
+            border-bottom-left-radius: 6px
+
+    &:focus, &:hover, &:active
+
+        .photo-byline
+            //backdrop-filter: blur(30px)
+            background-color: rgba(0, 0, 0, 0.3)
+
+// Featured Post
+
+.featured-tile
+    border-radius: 6px
+
+    h2
+        line-height: 1.15
+        padding-bottom: 1.25rem
+
+    .blur
+        border-radius: 6px
+        transition: background-color $transition
+        padding: 1.25rem
+
+    .background-image
+        border-radius: 8px
+        
+        &::before, &::after
+            border-radius: 8px
+
+    .gatsby-image-wrapper
+        border-radius: 6px
+
+    .post-info-anchor
+        position: relative
+
+    .post-info
+        position: absolute
+        top: -20px
+        right: 20px
+        background-color: $devon-green
+        padding: 10px 15px
+        border-radius: 8px
+
+        .subtitle
+            color: $white
+            font-size: 13pt
+            
+    .has-text-link
+        transition: color $transition
+
+    &:focus, &:hover, &:active
+
+        .blur
+            background-color: rgba(255, 255, 255, 0.65)
+
+        .has-text-link
+            color: darken($link, 15%) !important
+
+.blur
+    backdrop-filter: blur(1rem)
+    background-color: rgba(255, 255, 255, 0.80)
 
 // Footer
 
@@ -257,6 +379,9 @@ div#wrapper
     background-color: $paper
 
 // Elements
+
+hr
+    background-color: $devon-neu-highlight
 
 ul.taglist a
     font-weight: 600
@@ -718,3 +843,22 @@ ul.taglist a
 
     .section
         padding: 2.5rem 3rem
+
+    .is-line-height-equal
+        max-width: 80%
+
+    .no-padding-right-tablet
+        padding-right: 0
+
+    .featured-tile
+
+        h2
+            padding-bottom: 1rem
+
+        .post-info
+            position: absolute
+            top: -20px
+            right: 20px
+            background-color: $devon-green
+            padding: 10px 15px
+            border-radius: 8px

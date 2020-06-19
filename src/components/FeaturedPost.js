@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import BackgroundImage from 'gatsby-background-image-es5'
 
 class FeaturedPost extends React.Component {
   render() {
@@ -9,48 +10,57 @@ class FeaturedPost extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline m-b-10">
+      <div className="columns m-b-10">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child notification box ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <div>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta m-t-10">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+            <div className="is-parent column is-12" key={post.id}>
+                <Link
+                    className="no-decoration"
+                    to={post.fields.slug}
+                >
+                    <article
+                        className={`is-child box featured-tile p-0 ${
+                        post.frontmatter.featuredpost ? 'is-featured' : ''
+                        }`}
                     >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span></span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </div>
-                <p className="m-t-10">
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-primary" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                        <BackgroundImage
+                            Tag="section"
+                            className={"background-image"}
+                            fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
+                        >
+                            <div className="blur">
+                                <div className="column is-12 p-b-0">
+                                    <h2 className="is-size-3 sunflower-bold">
+                                        {post.frontmatter.title}
+                                    </h2>
+                                </div>
+                                <div className="column is-12 p-b-0">
+                                    {post.frontmatter.featuredimage ? (
+                                        <div className="featured-thumbnail post-info-anchor">
+                                            <PreviewCompatibleImage
+                                                imageInfo={{
+                                                image: post.frontmatter.featuredimage,
+                                                alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                                                }}
+                                            />
+                                            <div className="post-info">
+                                                <p className="subtitle">
+                                                    {post.frontmatter.date} | By {post.frontmatter.author}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        ) : null}
+                                </div>
+                                <div className="column is-12">
+                                    <div className="content p-t-10 p-b-10">
+                                        {post.frontmatter.description}
+                                        <span className="has-text-link">&nbsp;Read more →</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </BackgroundImage>
+                    </article>
+                </Link>
             </div>
           ))}
       </div>
@@ -77,7 +87,6 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
               fields {
                 slug
@@ -85,11 +94,13 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                description
+                author
+                date(formatString: "DD MMMM, YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 512, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

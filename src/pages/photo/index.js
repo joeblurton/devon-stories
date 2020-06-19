@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
-//import PhotoRoll from '../../components/PhotoRoll'
+import PhotoRoll from '../../components/PhotoRoll'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -16,19 +16,20 @@ export default class BlogIndexPage extends React.Component {
           <h1
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
+              padding: '1rem 1rem 0 1rem',
             }}
           >
-            Latest Stories
+            Photos
           </h1>
+          <h2
+            style={{
+              padding: '0 1rem',
+            }}>Kindly submitted by readers.</h2>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              {/*<BlogRoll />*/}
+              <PhotoRoll />
             </div>
           </div>
         </section>
