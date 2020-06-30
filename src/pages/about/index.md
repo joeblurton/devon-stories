@@ -5,7 +5,7 @@ title: About Devon Stories
 ---
 I started Devon Stories in the summer of 2020 to showcase Devon’s rich cultural and natural heritage. I’d like to talk a little about what motivated me.
 
-I first came to Devon to study Archaeology at the University of Exeter, already deeply in love with the place. I grew up in Somerset, arguably a beautiful place in it’s own right. Somehow, however, I felt restless. Perhaps I equated the flatness of Somerset with dullness.
+I first came to Devon to study Archaeology at the University of Exeter, already deeply in love with the place. I grew up in Somerset, arguably a very beautiful place in its own right. Somehow, however, I felt restless. Perhaps I equated the flatness of Somerset with dullness.
 
 From the moment I could drive I took every opportunity to pootle over the Blackdown Hills, exploring Devon in my beloved old Morris Minor. This often seemed a challenging, epic journey, although that’s hard to believe now! I camped out with friends, joined sing-alongs in the folk clubs that scatter the county, met many wonderful people, and decided that Devon was where I wanted to be.
 
