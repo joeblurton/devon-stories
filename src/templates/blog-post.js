@@ -18,8 +18,6 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  console.log(featuredimage)
-
   return (
     <div className="running-text">
       <header className="section header-section">
@@ -46,7 +44,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section body-section">
         {helmet || ''}
         <div className="container content">
           <div className="columns">

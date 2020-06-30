@@ -70,6 +70,7 @@ $transition: 0.5s linear
 body
     font-size: 1.1em
     font-weight: 600
+    letter-spacing: 1px
 
 .section
     padding: 1.5rem 1rem
@@ -287,6 +288,23 @@ header img.over-the-top
 .section.image-section
     padding: 0
         
+.running-text .body-section
+    font-family: $family-sans-serif-light
+    line-height: 1.66em
+
+    p
+        margin-bottom: 1em
+
+    p:first-of-type
+        padding-top: 1rem
+
+        &::first-line
+            font-family: $sunflower
+
+        &::first-letter
+            font-family: $sunflower
+            font-size: 2rem
+            line-height: 1rem
 
 .big-button
     text-decoration: none
@@ -875,6 +893,13 @@ ul.taglist a
 
     .section
         padding: 2.5rem 3rem
+
+    .running-text .body-section
+        font-size: 1.5rem
+        line-height: 2em
+
+        p
+            margin-bottom: 2em
 
     .is-line-height-equal
         max-width: 80%
