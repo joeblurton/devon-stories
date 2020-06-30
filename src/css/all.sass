@@ -27,6 +27,7 @@
 
 // Fonts
 $family-sans-serif: made_mirage_medium
+$family-sans-serif-light: made_mirage_regular
 $sunflower: made_sunflower
 
 h1,h2,h3,h4,h5,h6
@@ -41,6 +42,7 @@ $devon-neu-highlighter: #FFD4A6
 $devon-neu-dark: #DCA267
 $devon-neu-darker: #976F46
 $dark-paper: #ffbc77
+$clay: #dcc4a6
 $paper: #FFF3E6
 $borders: #D9A874
 $border-hint: #FFD4A8
@@ -122,6 +124,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .text-peach
     color: $peach
 
+label.label
+    font-size: 1.1rem
+
+.text-lightweight
+    font-family: $family-sans-serif-light
+    font-weight: 400
+
 .box:not(:last-child), 
 .content:not(:last-child),
 .notification:not(:last-child), 
@@ -146,8 +155,9 @@ nav.is-fixed-bottom
     min-height: 4rem
 
 // Brand
-header
+.ds-header
     background-color: $paper
+    padding-bottom: 1rem
 
 header img.over-the-top
     width: 160px
@@ -263,8 +273,20 @@ header img.over-the-top
 
 // Page
 
-div#wrapper
-    background-color: $dark-paper
+.section.header-section
+    background-color: $clay
+    padding: 2rem 1rem
+
+    h1
+        margin-bottom: 1rem
+
+    p
+        font-size: 1.34rem
+        font-family: $family-sans-serif-light
+
+.section.image-section
+    padding: 0
+        
 
 .big-button
     text-decoration: none
@@ -840,6 +862,16 @@ ul.taglist a
     header img.over-the-top
         width: 200px
         height: 200px
+
+    .section.header-section
+        padding: 2rem 3rem 2rem
+
+        h1
+            font-size: 3.5rem
+
+        p
+            font-size: 1.34rem
+            font-family: $family-sans-serif-light
 
     .section
         padding: 2.5rem 3rem
