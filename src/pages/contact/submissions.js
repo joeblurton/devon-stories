@@ -1,6 +1,8 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 function encode(data) {
   const formData = new FormData()
@@ -43,12 +45,17 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
+        <header className="section header-section">
           <div className="container">
             <div className="content">
               <h1>Submit a Story</h1>
-              <p className="m-b-20">Devon Stories relies on the creative suggestions of its audience. If you have a great story idea, let us know here.</p>
-              <hr />
+              <p>Devon Stories relies on the creative suggestions of its audience. If you have a great story idea, let us know here.</p>
+            </div>
+          </div>
+        </header>
+        <section className="section">
+          <div className="container">
+            <div className="content">
               <form
                 name="submission"
                 method="post"
@@ -65,68 +72,89 @@ export default class Contact extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'text'}
-                      name={'name'}
-                      onChange={this.handleChange}
-                      id={'name'}
-                      required={true}
-                    />
+                <div className="columns">
+                  <div className="column is-half-tablet">
+                    <div className="field">
+                      <label className="label" htmlFor={'name'}>
+                        Your name
+                      </label>
+                      <div className="control">
+                        <input
+                          className="input"
+                          type={'text'}
+                          name={'name'}
+                          onChange={this.handleChange}
+                          id={'name'}
+                          required={true}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column is-half-tablet">
+                    <div className="field">
+                      <label className="label" htmlFor={'name'}>
+                        Your email adress
+                      </label>
+                      <div className="control">
+                        <input
+                          className="input"
+                          type={'text'}
+                          name={'email'}
+                          onChange={this.handleChange}
+                          id={'email'}
+                          required={true}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your email adress
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'text'}
-                      name={'email'}
-                      onChange={this.handleChange}
-                      id={'email'}
-                      required={true}
-                    />
+                <div className="columns">
+                  <div className="column is-two-thirds-tablet">
+                    <div className="field">
+                      <label className="label" htmlFor={'name'}>
+                        Your story idea
+                      </label>
+                      <div className="control">
+                        <textarea
+                          className="textarea"
+                          name={'idea'}
+                          onChange={this.handleChange}
+                          id={'idea'}
+                          required={true}
+                          style={{
+                            minHeight: "11em"
+                          }}
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your story idea
-                  </label>
-                  <div className="control">
-                    <textarea
-                      className="textarea"
-                      name={'idea'}
-                      onChange={this.handleChange}
-                      id={'idea'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <p><label className="label" htmlFor={'attachment'}>Your files</label></p>
-                  <div className="file">
-                    <label className="file-label">
-                      <input
-                        className="file-input"
-                        type="file"
-                        name="attachment"
-                        onChange={this.handleAttachment}
-                      />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
+                  <div className="column is-one-third-tablet">
+                    <div className="field">
+                      <p><label className="label" htmlFor={'attachment'}>Your files</label></p>
+                      <div className="file">
+                        <label className="file-label">
+                          <input
+                            className="file-input"
+                            type="file"
+                            name="attachment"
+                            onChange={this.handleAttachment}
+                          />
+                          <span className="file-cta">
+                            <span className="file-label">Choose a file…</span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="notification is-info">
+                      <span className="icon is-small p-r-10">
+                        <FontAwesomeIcon icon={faInfoCircle} />
                       </span>
-                    </label>
+                      Please read our <a href="/docs/privacy-policy-19-06-2020/">Privacy Policy</a> to understand how Devon Stories will store your data.
+                    </div>
                   </div>
                 </div>
                 <div className="field m-b-30">
-                  <button className="button is-link is-pulled-right" type="submit">
+                  <button className="button is-primary is-pulled-right" type="submit">
                     Send
                   </button>
                 </div>
