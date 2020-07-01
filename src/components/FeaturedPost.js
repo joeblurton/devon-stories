@@ -30,7 +30,7 @@ class FeaturedPost extends React.Component {
                         >
                             <div className="blur">
                                 <div className="column is-12 pt-0-mobile pr-0-mobile pl-0-mobile pb-0-tablet">
-                                    <h2 className="title has-text-primary is-size-3 sunflower-bold">
+                                    <h2 className="title featured-title has-text-primary is-size-3 sunflower-bold">
                                         {post.frontmatter.title}
                                     </h2>
                                 </div>
