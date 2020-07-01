@@ -1,31 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo@2x.png'
+import { Location } from '@reach/router';
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 
-const Brand = class extends React.Component {
+
+const BrandHeader = class extends React.Component {
 
     render() {
+
+        const { location } = this.props;
+
+        const home = location.pathname == "/" ? true : false
 
         return (
             <header className="ds-header">
                 <div className="content">
                     <div className="container">
                         <div style={{ maxWidth: '100vw' }} className="columns mb-0">
-                            <div className="column is-3">
-                            </div>
-                            <div className="column is-6 has-text-centered">
-                                <Link to="/">
-                                    <img src={logo} 
-                                        alt="Devon Stories" 
-                                        className="over-the-top"
-                                    />
-                                </Link>
-                            </div>
-                            <div className="column is-3 is-hidden-mobile social is-vcentered p-t-30">
+                        <div className="column is-3 is-hidden-mobile social is-vcentered pt-5">
                                 <nav className="navbar">
                                     <a title="facebook" className="navbar-item" href="https://www.facebook.com/devonstoriesdotcom">
                                     <img
@@ -51,17 +47,41 @@ const Brand = class extends React.Component {
                                     </a>
                                 </nav>
                             </div>
+                            <div className="column is-6 has-text-centered">
+                                {!home && <Link to="/">
+                                    <img src={logo} 
+                                        alt="Devon Stories" 
+                                        className="over-the-top"
+                                    />
+                                </Link>}
+                            </div>
+                            <div className="column is-3">
+                            </div>
                         </div>
-                        <div className="columns subtitle-wrapper mb-1">
+                        {!home && <div className="columns subtitle-wrapper mb-1">
                             <div className="column">
                                 <p className="sunflower has-text-centered is-italic has-text-weight-light is-size-5-tablet is-size-6">
                                     A highly irregular local interest magazine.
                                 </p>
                             </div>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </header>
+        )
+    }
+}
+
+const Brand = class extends React.Component {
+
+    render() {
+
+        return (
+            <Location>
+                {
+                    locationProps => <BrandHeader {...locationProps} />
+                }
+            </Location>
         )
     }
 }

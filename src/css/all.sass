@@ -43,6 +43,7 @@ $devon-neu-dark: #DCA267
 $devon-neu-darker: #976F46
 $dark-paper: #ffbc77
 $clay: #d6b68e
+$dark-clay: #91795d
 $paper: #FFF3E6
 $borders: #D9A874
 $border-hint: #FFD4A8
@@ -173,11 +174,10 @@ nav.is-fixed-bottom
 // Brand
 .ds-header
     background-color: $paper
-    padding-bottom: 1rem
 
 header img.over-the-top
-    width: 160px
-    height: 160px
+    width: 120px
+    height: 120px
 
 .social .navbar 
     align-items: stretch
@@ -189,8 +189,15 @@ header img.over-the-top
         align-items: center
         display: flex
 
+header .social .navbar
+    justify-content: left
+    margin-left: -1rem
+
 .subtitle-wrapper
     margin-top: 0
+
+.circle
+  border-radius: 50%
 
 // Navbar component
 .navbar-bottom 
@@ -292,6 +299,23 @@ header img.over-the-top
 
 // Page
 
+.position-relative
+  position: relative
+
+.section.header-section.home-header
+  padding-bottom: 1rem
+
+.over-the-top-circle
+  position: absolute
+  display: inline-block
+  right: 0
+  top: -5rem
+  padding: 15px
+  background-color: $white
+
+.clearfix
+  clear: both
+
 .has-background-clay
     background-color: $clay
 
@@ -340,6 +364,9 @@ header img.over-the-top
         .has-background-link
             transition: background-color $transition
             background-color: darken($blue, 3%) !important
+
+.button.is-primary:hover, .button.is-primary.is-hovered
+    background-color: $darkest-devon
 
 
 // BlogRoll
@@ -430,6 +457,9 @@ section.blog-section
         .has-text-link
             color: darken($link, 15%) !important
 
+        .title.has-text-primary
+            color: $darkest-devon !important
+
 .blur
     backdrop-filter: blur(8px)
     background-color: rgba(255, 255, 255, 0.8)
@@ -490,7 +520,8 @@ ul.taglist a
     border-radius: 20px
     box-shadow: inset 10px 10px 10px $devon-neu-dark, inset -10px -10px 10px $devon-neu-highlight
 
-
+.has-shadow
+    box-shadow: -1px -1px 3px lighten($dark-clay, 20%), 1px 1px 3px lighten($black, 20%)
 
 // Reponsive
 
@@ -507,11 +538,20 @@ ul.taglist a
         .subtitle-wrapper
             margin-top: -0.5rem !important
 
-@media screen and (min-width: 1024px)
+@media screen and (max-width: 1024px)
+
+    .over-the-top-circle
+        right: 1rem
+
+@media screen and (min-width: 1025px)
     
     .navbar 
         min-height: 4.25rem
 
+    .over-the-top-circle
+        top: -6rem
+        right: 1rem
+    
     .navbar-bottom .search-container
         flex: 0 1 auto
 
@@ -533,10 +573,11 @@ ul.taglist a
 
     .subtitle-wrapper
         margin-top: -1.5rem !important
+        padding-bottom: 1rem
     
     header img.over-the-top
-        width: 200px
-        height: 200px
+        width: 160px
+        height: 160px
 
     .section.header-section
         padding: 2rem 3rem 2rem

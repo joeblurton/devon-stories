@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 //import useScript from '../hooks/useScript';
-
+import logo from '../img/logo@2x.png'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import PhotoRoll from '../components/PhotoRoll' 
@@ -21,12 +21,21 @@ export const IndexPageTemplate = ({
 
     return (
         <div>
-            <header className="section header-section has-background-clay">
-              <div className="container">
+            <header className="section header-section home-header has-background-clay">
+              <div className="container position-relative">
                 <div className="content">
-                  <h1>Devon Stories</h1>
-                  <p>Tales from the heart of Devonshire...</p>
+                  <h1 className="mb-2">Devon Stories</h1>
+                  <p className="is-italic">A highly irregular local interest magazine.</p>
                 </div>
+                <div className="circle over-the-top-circle has-shadow is-hidden-mobile">
+                  <Link to="/">
+                      <img src={logo} 
+                          alt="Devon Stories" 
+                          className="over-the-top"
+                      />
+                  </Link>
+                </div>
+                <div class="clearfix"></div>
               </div>
             </header>
             <section className="section section--gradient blog-section pt-5">
@@ -42,9 +51,9 @@ export const IndexPageTemplate = ({
                                 <div className="column is-12 px-0 py-0">
                                     <BlogRoll/>
                                 </div>
-                                <div className="column is-12 has-text-centered pt-5">
-                                    <Link className="btn" to="/blog">
-                                        <button className="button is-primary">Read more stories</button>
+                                <div className="column is-12 has-text-centered pt-6">
+                                    <Link className="btn no-decoration" to="/blog">
+                                        <button className="button is-primary is-medium">Read more stories</button>
                                     </Link>
                                 </div>
                             </div>
