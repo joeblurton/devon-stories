@@ -21,22 +21,30 @@ export const IndexPageTemplate = ({
 
     return (
         <div>
-            <section className="section section--gradient blog-section has-background-clay">
-                <div className="container">
+            <header className="section header-section has-background-clay">
+              <div className="container">
+                <div className="content">
+                  <h1>Devon Stories</h1>
+                  <p>Tales from the heart of Devonshire...</p>
+                </div>
+              </div>
+            </header>
+            <section className="section section--gradient blog-section pt-5">
+                <div className="container pt-2">
                     <div className="columns">
                         <div className="column is-two-thirds-tablet no-padding-mobile no-padding-right-tablet">
-                            <div className="column is-12 no-padding-right-tablet">
+                            <div className="column is-12 px-0 padding-1-mobile">
                                 <div className="column is-12 px-0 py-0">
                                     <FeaturedPost/>
                                 </div>
                             </div>
-                            <div className="column is-12">
+                            <div className="column is-12 px-0 padding-1-mobile">
                                 <div className="column is-12 px-0 py-0">
                                     <BlogRoll/>
                                 </div>
-                                <div className="column is-12 has-text-centered">
+                                <div className="column is-12 has-text-centered pt-5">
                                     <Link className="btn" to="/blog">
-                                        Read more
+                                        <button className="button is-primary">Read more stories</button>
                                     </Link>
                                 </div>
                             </div>

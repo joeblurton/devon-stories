@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import PrevNext from '../components/PrevNext'
 import Content, { HTMLContent } from '../components/Content'
 import Img from 'gatsby-image'
 
@@ -14,9 +15,11 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  context,
   featuredimage
 }) => {
   const PostContent = contentComponent || Content
+  const { prev, next } = context;
 
   return (
     <div className="running-text">
@@ -50,8 +53,18 @@ export const BlogPostTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <PostContent content={content} />
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <PrevNext prev={prev} next={next} />
               {tags && tags.length ? (
-                <div style={{ marginTop: `4rem` }}>
+                <div style={{ marginTop: `3rem` }}>
                   <h4>Tags</h4>
                   <ul className="taglist">
                     {tags.map((tag) => (
@@ -78,15 +91,16 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
-
+  
   return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        context={pageContext}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>

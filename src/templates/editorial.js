@@ -17,32 +17,50 @@ export const EditorialTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+    <div className="running-text">
+      <header className="section header-section has-background-clay">
+        <div className="container">
+          <div className="content">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <h1>{title}</h1>
+                <p>{description}</p>
               </div>
-            ) : null}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </header>
+      <section className="section body-section">
+        {helmet || ''}
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <PostContent content={content} />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              {tags && tags.length ? (
+                <div style={{ marginTop: `3rem` }}>
+                  <h4>Tags</h4>
+                  <ul className="taglist">
+                    {tags.map((tag) => (
+                      <li key={tag + `tag`}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
 
