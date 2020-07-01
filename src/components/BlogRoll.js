@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import BackgroundImage from 'gatsby-background-image-es5'
 
 class BlogRoll extends React.Component {
   render() {
@@ -19,44 +20,43 @@ class BlogRoll extends React.Component {
               ) {
               return (
                 <div className="is-parent column is-6" key={post.id}>
-                  <article
-                    className={`blog-list-item tile is-child notification box ${
-                      post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
-                  >
-                    <div>
-                      {post.frontmatter.featuredimage ? (
-                        <div className="featured-thumbnail">
-                          <PreviewCompatibleImage
-                            imageInfo={{
-                              image: post.frontmatter.featuredimage,
-                              alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                            }}
-                          />
-                        </div>
-                      ) : null}
-                      <p className="post-meta m-t-10">
-                        <Link
-                          className="title has-text-primary is-size-4"
-                          to={post.fields.slug}
+                  <Link to={post.fields.slug} className="no-decoration">
+                    <article
+                      className={`card ${
+                        post.frontmatter.featuredpost ? 'is-featured' : ''
+                      }`}
+                    >
+                        <BackgroundImage
+                            Tag="section"
+                            className={"background-image"}
+                            fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
                         >
-                          {post.frontmatter.title}
-                        </Link>
-                        <span></span>
-                        <span className="subtitle is-size-5 is-block">
-                          {post.frontmatter.date}
-                        </span>
-                      </p>
-                    </div>
-                    <p className="m-t-10">
-                      {post.excerpt}
-                      <br />
-                      <br />
-                      <Link className="button is-primary" to={post.fields.slug}>
-                        Keep Reading →
-                      </Link>
-                    </p>
-                  </article>
+                          <div className="blur blog-roll-content">
+                            {post.frontmatter.featuredimage ? (
+                              <div className="card-image">
+                                <PreviewCompatibleImage
+                                  imageInfo={{
+                                    image: post.frontmatter.featuredimage,
+                                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                                  }}
+                                />
+                              </div>
+                            ) : null}
+                            <div className="card-content">
+                              <p className="title has-text-primary is-size-4">
+                                {post.frontmatter.title}
+                              </p>
+                              <p className="subtitle is-size-5 is-block">
+                                {post.frontmatter.date}
+                              </p>
+                              <p className="m-t-10">
+                                {post.excerpt}
+                              </p>
+                            </div>
+                          </div>
+                        </BackgroundImage>
+                    </article>
+                  </Link>
                 </div>
               )
             } else {
@@ -99,7 +99,7 @@ export default (props) => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 90) {
+                    fluid(maxWidth: 340, quality: 90) {
                       ...GatsbyImageSharpFluid
                     }
                   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -7,8 +8,8 @@ import twitter from '../img/social/twitter.svg'
 const Footer = class extends React.Component {
 	render() {
 		return ( 
-			<footer className="footer" >
-				<div className="content" >
+			<div>
+				<footer className="footer is-hidden-tablet" >
 					<div className="container" >
 						<div className="columns">
 							<div className="column is-3 is-hidden-tablet social is-vcentered p-b-30">
@@ -39,8 +40,32 @@ const Footer = class extends React.Component {
 							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
+				</footer>
+				<footer className="second-footer">
+					<hr className="is-hidden-touch"/>
+					<div className="columns">
+						<div className="column is-12">
+							<p className="is-size-5 has-text-centered">&#169; Devon Stories 2020</p>
+							<hr className="is-hidden-touch"/>
+						</div>
+					</div>
+					<div className="columns is-hidden-touch">
+						<div className="column is-6-tablet is-offset-3">
+							<nav className="level">
+								<p className="level-item has-text-centered">
+									<Link className="link is-info" to="/contact/submissions">Submissions</Link>
+								</p>
+								<p className="level-item has-text-centered">
+									<Link to="/about" className="link is-info">About</Link>
+								</p>
+								<p className="level-item has-text-centered">
+									<Link to="/docs/privacy-policy-19-06-2020/" className="link is-info">Privacy Policy</Link>
+								</p>
+							</nav>
+						</div>
+					</div>
+				</footer>
+			</div>
 		)
 	}
 }
