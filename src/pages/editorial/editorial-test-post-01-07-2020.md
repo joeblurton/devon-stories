@@ -5,7 +5,7 @@ author: Joe Blurton
 date: 2020-07-01T13:54:47.799Z
 description: A post in which I editorialise
 tags:
-  - editorial
+  - Editorial
 ---
 <!--StartFragment-->
 
