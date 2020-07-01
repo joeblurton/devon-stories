@@ -14,7 +14,7 @@ const Brand = class extends React.Component {
             <header className="ds-header">
                 <div className="content">
                     <div className="container">
-                        <div style={{ maxWidth: '100vw' }} className="columns">
+                        <div style={{ maxWidth: '100vw' }} className="columns mb-0">
                             <div className="column is-3">
                             </div>
                             <div className="column is-6 has-text-centered">
@@ -50,6 +50,13 @@ const Brand = class extends React.Component {
                                     />
                                     </a>
                                 </nav>
+                            </div>
+                        </div>
+                        <div className="columns subtitle-wrapper mb-1">
+                            <div className="column">
+                                <p className="sunflower has-text-centered is-italic has-text-weight-light is-size-5-tablet is-size-6">
+                                    A highly irregular local interest magazine.
+                                </p>
                             </div>
                         </div>
                     </div>

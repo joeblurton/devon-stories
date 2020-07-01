@@ -10,7 +10,7 @@ class FeaturedPost extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns m-b-10">
+      <div className="columns mb-1">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
@@ -19,7 +19,7 @@ class FeaturedPost extends React.Component {
                     to={post.fields.slug}
                 >
                     <article
-                        className={`is-child box featured-tile p-0 ${
+                        className={`is-child box featured-tile px-0 py-0 ${
                         post.frontmatter.featuredpost ? 'is-featured' : ''
                         }`}
                     >
@@ -29,12 +29,12 @@ class FeaturedPost extends React.Component {
                             fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
                         >
                             <div className="blur">
-                                <div className="column is-12 p-b-0">
+                                <div className="column is-12 pt-0-mobile pr-0-mobile pl-0-mobile pb-0-tablet">
                                     <h2 className="is-size-3 sunflower-bold">
                                         {post.frontmatter.title}
                                     </h2>
                                 </div>
-                                <div className="column is-12 p-b-0">
+                                <div className="column is-12 pt-0-mobile pr-0-mobile pl-0-mobile">
                                     {post.frontmatter.featuredimage ? (
                                         <div className="featured-thumbnail post-info-anchor">
                                             <PreviewCompatibleImage
@@ -51,8 +51,8 @@ class FeaturedPost extends React.Component {
                                         </div>
                                         ) : null}
                                 </div>
-                                <div className="column is-12">
-                                    <div className="content p-t-10 p-b-10">
+                                <div className="column is-12 no-padding-mobile">
+                                    <div className="content p-t-10 pt-0-mobile pr-0-mobile pl-0-mobile">
                                         {post.frontmatter.description}
                                         <span className="has-text-link">&nbsp;Read more →</span>
                                     </div>
