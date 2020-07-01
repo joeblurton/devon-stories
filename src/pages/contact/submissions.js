@@ -2,7 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 function encode(data) {
   const formData = new FormData()
@@ -45,7 +45,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <header className="section header-section">
+        <header className="section header-section has-background-clay">
           <div className="container">
             <div className="content">
               <h1>Submit a Story</h1>
@@ -146,7 +146,7 @@ export default class Contact extends React.Component {
                       </div>
                     </div>
                     <div className="notification is-info">
-                      <span className="icon is-small p-r-10">
+                      <span className="icon is-small pr-2">
                         <FontAwesomeIcon icon={faInfoCircle} />
                       </span>
                       Please read our <a href="/docs/privacy-policy-19-06-2020/">Privacy Policy</a> to understand how Devon Stories will store your data.
@@ -154,8 +154,11 @@ export default class Contact extends React.Component {
                   </div>
                 </div>
                 <div className="field m-b-30">
-                  <button className="button is-primary is-pulled-right" type="submit">
-                    Send
+                  <button className="button is-primary is-medium is-pulled-right" type="submit">
+                    <span>Send</span>
+                    <span className="icon is-small pl-1 pr-1">
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </span>
                   </button>
                 </div>
               </form>

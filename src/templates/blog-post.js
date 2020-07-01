@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
 
   return (
     <div className="running-text">
-      <header className="section header-section">
+      <header className="section header-section has-background-clay">
         <div className="container">
           <div className="content">
             <div className="columns">
