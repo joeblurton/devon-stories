@@ -7,7 +7,7 @@ description: My new post.
 featuredpost: false
 featuredimage: /img/red-zeppelin-belvedere.png
 tags:
-  - test
+  - Test
 ---
 Stuff
 
