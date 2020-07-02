@@ -3,23 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import TitleBar from '../components/TitleBar'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PostContent = contentComponent || Content
 
   return (
     <div className="running-text">
-      <header className="section header-section has-background-clay">
-        <div className="container">
-          <div className="content">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <h1 className="mb-0">{title}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <TitleBar title={title} constrained={true} />
       <section className="section body-section">
         <div className="container content">
           <div className="columns">

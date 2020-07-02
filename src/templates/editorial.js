@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import TitleBar from '../components/TitleBar'
 import Content, { HTMLContent } from '../components/Content'
 
 export const EditorialTemplate = ({
@@ -18,18 +19,7 @@ export const EditorialTemplate = ({
 
   return (
     <div className="running-text">
-      <header className="section header-section has-background-clay">
-        <div className="container">
-          <div className="content">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <h1>{title}</h1>
-                <p>{description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <TitleBar title={title} description={description} constrained={true} />
       <section className="section body-section">
         {helmet || ''}
         <div className="container content">

@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 //import useScript from '../hooks/useScript';
-import logo from '../img/logo@2x.png'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import PhotoRoll from '../components/PhotoRoll' 
 import FeaturedPost from '../components/FeaturedPost';
+import TitleBar from '../components/TitleBar'
 
 export const IndexPageTemplate = ({
   image,
@@ -21,23 +21,7 @@ export const IndexPageTemplate = ({
 
     return (
         <div>
-            <header className="section header-section home-header has-background-clay">
-              <div className="container position-relative">
-                <div className="content">
-                  <h1 className="mb-2">Devon Stories</h1>
-                  <p className="is-italic">A highly irregular local interest magazine.</p>
-                </div>
-                <div className="circle over-the-top-circle has-shadow is-hidden-mobile">
-                  <Link to="/">
-                      <img src={logo} 
-                          alt="Devon Stories" 
-                          className="over-the-top"
-                      />
-                  </Link>
-                </div>
-                <div className="clearfix"></div>
-              </div>
-            </header>
+            <TitleBar title={title} description={"A highly irregular local interest magazine."} descriptionItalic={true} />
             <section className="section section--gradient blog-section pt-5">
                 <div className="container pt-2">
                     <div className="columns">

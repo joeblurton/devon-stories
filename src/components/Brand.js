@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo@2x.png'
+import _ from 'lodash'
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -11,7 +12,8 @@ const BrandHeader = class extends React.Component {
 
     render() {
         const { path } = this.props;
-        const home = path == "/" ? true : false
+
+        const miniturisedHeader = (path == "/" || (_.startsWith(path, "/photo/photo"))) ? true : false
         return (
             <header className="ds-header">
                 <div className="content">
@@ -43,24 +45,7 @@ const BrandHeader = class extends React.Component {
                                     </a>
                                 </nav>
                             </div>
-                            <div className="column is-6 has-text-centered">
-                                {!home && <Link to="/">
-                                    <img src={logo} 
-                                        alt="Devon Stories" 
-                                        className="over-the-top"
-                                    />
-                                </Link>}
-                            </div>
-                            <div className="column is-3">
-                            </div>
                         </div>
-                        {!home && <div className="columns subtitle-wrapper mb-1">
-                            <div className="column">
-                                <p className="sunflower has-text-centered is-italic has-text-weight-light is-size-5-tablet is-size-6">
-                                    A highly irregular local interest magazine.
-                                </p>
-                            </div>
-                        </div>}
                     </div>
                 </div>
             </header>

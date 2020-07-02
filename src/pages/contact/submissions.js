@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import TitleBar from '../../components/TitleBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -45,14 +46,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <header className="section header-section has-background-clay">
-          <div className="container">
-            <div className="content">
-              <h1>Submit a Story</h1>
-              <p>Devon Stories relies on the creative suggestions of its audience. If you have a great story idea, let us know here.</p>
-            </div>
-          </div>
-        </header>
+        <TitleBar 
+          title={"Submit a Story"} 
+          description={"Devon Stories relies on the creative suggestions of its audience. If you have a great story idea, let us know here."} 
+        />
         <section className="section">
           <div className="container">
             <div className="content">

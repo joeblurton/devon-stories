@@ -16,8 +16,6 @@ const PrevNext = (props) => {
 
     const { prev, next } = props
 
-    console.log(props)
-
     return (
         <div className="columns">
             <div className="column is-6">

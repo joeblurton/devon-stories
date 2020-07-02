@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import TitleBar from '../components/TitleBar'
 
 export const PhotoTemplate = ({
   caption,
@@ -15,37 +16,37 @@ export const PhotoTemplate = ({
 }) => {
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <div className="columns has-background-dark">
-                <div className="column is-10 is-offset-1">
-                    <img className="solo-photo" src={photo} alt={title}/>
-                    <p className="has-text-white has-text-weight-normal">&#169; {author}</p>
-                    <p className="has-text-white has-text-weight-normal">{caption}</p>
+    <div className="single-photo">
+        <TitleBar title={title} description={"By " + author} constrained={true} />
+        <section className="section full-width">
+          {helmet || ''}
+          <div className="container content">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="columns has-background-dark">
+                    <div className="column is-10 is-offset-1">
+                        <img className="solo-photo" src={photo} alt={title}/>
+                        <p className="has-text-white has-text-weight-normal">&#169; {author}</p>
+                        <p className="has-text-white has-text-weight-normal">{caption}</p>
+                    </div>
                 </div>
-            </div>
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+                {tags && tags.length ? (
+                  <div style={{ marginTop: `4rem` }}>
+                    <h4>Tags</h4>
+                    <ul className="taglist">
+                      {tags.map((tag) => (
+                        <li key={tag + `tag`}>
+                          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </div>
-            ) : null}
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+    </div>
   )
 }
 

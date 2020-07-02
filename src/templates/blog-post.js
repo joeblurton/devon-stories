@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import TitleBar from '../components/TitleBar'
 import PrevNext from '../components/PrevNext'
 import Content, { HTMLContent } from '../components/Content'
 import Img from 'gatsby-image'
@@ -23,18 +24,7 @@ export const BlogPostTemplate = ({
 
   return (
     <div className="running-text">
-      <header className="section header-section has-background-clay">
-        <div className="container">
-          <div className="content">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <h1>{title}</h1>
-                <p>{description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <TitleBar title={title} description={description} constrained={true} />
       <section className="section image-section">
         <div className="container">
           <div className="columns">

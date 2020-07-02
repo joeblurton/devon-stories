@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import TitleBar from '../components/TitleBar'
 
 class TagRoute extends React.Component {
 
@@ -24,13 +25,7 @@ class TagRoute extends React.Component {
 
     return (
       <Layout path={location.pathname}>
-        <header className="section header-section has-background-clay">
-          <div className="container">
-            <div className="content">
-              <h1 className="title is-size-3 is-bold-light mb-0">{tagHeader}</h1>
-            </div>
-          </div>
-        </header>
+        <TitleBar title={tagHeader} constrained={true} />
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
