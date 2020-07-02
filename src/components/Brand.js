@@ -10,13 +10,8 @@ import twitter from '../img/social/twitter.svg'
 const BrandHeader = class extends React.Component {
 
     render() {
-
         const { path } = this.props;
-
-        console.log(this.props)
-
         const home = path == "/" ? true : false
-
         return (
             <header className="ds-header">
                 <div className="content">
