@@ -4,7 +4,9 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 class TagRoute extends React.Component {
+
   render() {
+    const location = this.props.location 
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
@@ -21,7 +23,7 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`
 
     return (
-      <Layout>
+      <Layout path={location.pathname}>
         <header className="section header-section has-background-clay">
           <div className="container">
             <div className="content">

@@ -72,11 +72,11 @@ EditorialTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const Editorial = ({ data }) => {
+const Editorial = ({ data, location }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <EditorialTemplate
         content={post.html}
         contentComponent={HTMLContent}

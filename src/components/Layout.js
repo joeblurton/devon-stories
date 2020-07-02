@@ -10,7 +10,8 @@ import ES6Promise from 'es6-promise'
 import "isomorphic-fetch"
 ES6Promise.polyfill()
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, path }) => {
+
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -37,7 +38,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Brand />
+      <Brand path={path}/>
       <div id="wrapper">{children}</div>
       <Footer />
       <Navbar />

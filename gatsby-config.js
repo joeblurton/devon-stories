@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'Devon Stories',
-        description: 'Tales from deepest Devonshire.',
+        description: 'A highly irregular local interest magazine, with photography, field reports, history and stories from the heart of Devonshire.',
     },
     plugins: [
         'gatsby-plugin-sharp',

@@ -40,11 +40,11 @@ DocTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const Doc = ({ data }) => {
+const Doc = ({ data, location }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <DocTemplate
         content={post.html}
         contentComponent={HTMLContent}

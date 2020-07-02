@@ -57,11 +57,11 @@ export const PhotoTemplate = ({
   helmet: PropTypes.object,
 }*/
 
-const Photo = ({ data }) => {
+const Photo = ({ data, location }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <PhotoTemplate
         caption={post.frontmatter.title}
         photo={post.frontmatter.photo}

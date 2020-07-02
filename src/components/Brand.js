@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo@2x.png'
-import { Location } from '@reach/router';
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -12,9 +11,11 @@ const BrandHeader = class extends React.Component {
 
     render() {
 
-        const { location } = this.props;
+        const { path } = this.props;
 
-        const home = location.pathname == "/" ? true : false
+        console.log(this.props)
+
+        const home = path == "/" ? true : false
 
         return (
             <header className="ds-header">
@@ -72,18 +73,10 @@ const BrandHeader = class extends React.Component {
     }
 }
 
-const Brand = class extends React.Component {
-
-    render() {
-
-        return (
-            <Location>
-                {
-                    locationProps => <BrandHeader {...locationProps} />
-                }
-            </Location>
-        )
-    }
+const Brand = ({ path }) => {
+    return (
+        <BrandHeader path={path} />
+    )
 }
 
 export default Brand

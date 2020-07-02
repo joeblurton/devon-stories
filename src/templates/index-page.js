@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
                       />
                   </Link>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </header>
             <section className="section section--gradient blog-section pt-5">
@@ -97,11 +97,11 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
