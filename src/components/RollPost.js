@@ -6,7 +6,7 @@ import BackgroundImage from 'gatsby-background-image-es5'
 const RollPost = ({post}) => {
     
     return (
-        <div className="is-parent column is-6">
+        <div className="is-parent column is-12 is-one-third-tablet is-one-third-desktop">
             <Link to={post.fields.slug} className="no-decoration">
             <article
                 className={`card ${
@@ -37,7 +37,7 @@ const RollPost = ({post}) => {
                         {post.frontmatter.date}
                         </p>
                         <p className="m-t-10">
-                        {post.excerpt}
+                        {post.frontmatter.description}
                         </p>
                     </div>
                     </div>
