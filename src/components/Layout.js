@@ -7,8 +7,13 @@ import '../css/all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import ES6Promise from 'es6-promise'
+import { setConfig } from 'react-hot-loader'
 import "isomorphic-fetch"
 ES6Promise.polyfill()
+
+setConfig({
+  showReactDomPatchNotification: false
+})
 
 const TemplateWrapper = ({ children, path }) => {
 
