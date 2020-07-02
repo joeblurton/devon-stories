@@ -51,7 +51,7 @@ export const BlogPostTemplate = ({
       <section className="section pt-5 pb-6 has-background-clay">
         <div className="container">
           <div className="columns">
-            <div className="column is-10 is-offset-1" style={{display: "flex"}}>
+            <div className="column is-10 is-offset-1 is-flex-mobile">
               <PrevNext prev={prev} next={next} />
             </div>
           </div>
