@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import TitleBar from '../components/TitleBar'
 import PrevNext from '../components/PrevNext'
 import Content, { HTMLContent } from '../components/Content'
+import Tags from '../components/Tags'
 import Img from 'gatsby-image'
 
 export const BlogPostTemplate = ({
@@ -47,24 +48,18 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </section>
-      <hr />
-      <section className="section">
+      <section className="section pt-5 pb-6 has-background-clay">
         <div className="container">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-10 is-offset-1" style={{display: "flex"}}>
               <PrevNext prev={prev} next={next} />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
               {tags && tags.length ? (
-                <div style={{ marginTop: `3rem` }}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
-                    {tags.map((tag) => (
-                      <li key={tag + `tag`}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
+                  <Tags tags={tags} />
+                ) : null}
             </div>
           </div>
         </div>

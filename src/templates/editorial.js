@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import TitleBar from '../components/TitleBar'
+import Tags from '../components/Tags'
 import Content, { HTMLContent } from '../components/Content'
 
 export const EditorialTemplate = ({
@@ -35,16 +35,7 @@ export const EditorialTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               {tags && tags.length ? (
-                <div style={{ marginTop: `3rem` }}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
-                    {tags.map((tag) => (
-                      <li key={tag + `tag`}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Tags tags={tags} />
               ) : null}
             </div>
           </div>

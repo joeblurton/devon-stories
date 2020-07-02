@@ -14,7 +14,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <TitleBar title={"Tags"} constrained={true} />
+    <TitleBar title={"Tags"} description={"Many of the articles, photos and editorials on Devon Stories are categorised according to tags. Explore each category below."} constrained={true} />
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">

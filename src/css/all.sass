@@ -95,15 +95,15 @@ a, .content a h2
 
     &:hover, &:active, &:focus
       
-      .notification
+    .notification
         background-color: $devon-green
         color: $white
 
         .title.has-text-primary
-          color: $white !important
+            color: $white !important
 
         .excerpt
-          font-weight: 400
+            font-weight: 400
 
 .is-underlined
     text-decoration: underline
@@ -197,7 +197,7 @@ header .social .navbar
     padding-bottom: 1rem
 
 .circle
-  border-radius: 50%
+    border-radius: 50%
 
 // Navbar component
 .navbar-bottom 
@@ -300,21 +300,21 @@ header .social .navbar
 // Page
 
 .position-relative
-  position: relative
+    position: relative
 
 .section.header-section.home-header
-  padding-bottom: 1rem
+    padding-bottom: 1rem
 
 .over-the-top-circle
-  position: absolute
-  display: inline-block
-  right: 0
-  top: -5rem
-  padding: 15px
-  background-color: $white
+    position: absolute
+    display: inline-block
+    right: 0
+    top: -5rem
+    padding: 15px
+    background-color: $white
 
 .clearfix
-  clear: both
+    clear: both
 
 .has-background-clay
     background-color: $clay
@@ -372,7 +372,7 @@ header .social .navbar
 // BlogRoll
 
 section.blog-section
-  padding: 1rem 1rem
+    padding: 1rem 1rem
 
 // PhotoRoll
 .square-link
@@ -465,20 +465,31 @@ section.blog-section
     background-color: rgba(255, 255, 255, 0.8)
 
 .content .card .title
-  margin-bottom: 2rem
+    margin-bottom: 2rem
 
 .card 
-  border-radius: 8px
+    border-radius: 8px
 
-  .title
+    &.card-link
+        transition: background-color $transition
+
+        &:hover, &:focus, &:active
+            background-color: $devon-green
+            color: $white !important
+
+            .has-text-primary
+                color: $white !important
+                font-weight: 400
+
+.title
     margin-bottom: 1em
 
-  .blur
+.blur
     padding: 0
   
-  .gatsby-image-wrapper
-        border-bottom-right-radius: 0
-        border-bottom-left-radius: 0
+.gatsby-image-wrapper
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
 
 // Footer
 
@@ -486,7 +497,7 @@ section.blog-section
     background-color: $paper
 
 .second-footer
-  padding: 0 0 3em
+    padding: 0 0 3em
 
 // Elements
 
@@ -549,7 +560,7 @@ ul.taglist a
         margin-left: -1rem
 
 @media screen and (min-width: 1025px)
-    
+
     .navbar 
         min-height: 4.25rem
 
@@ -623,28 +634,28 @@ ul.taglist a
             border-radius: 8px
 
     .featured-title
-      font-size: 2.5rem !important
+        font-size: 2.5rem !important
     
     .pb-0-tablet
-      padding-bottom: 0 !important
+        padding-bottom: 0 !important
 
     .second-footer
-      padding: 2rem 0 4rem
+        padding: 2rem 0 4rem
 
 @media screen and (max-width: 1023px)
 
-	.no-padding-mobile
-		padding: 0 !important
+    .no-padding-mobile
+        padding: 0 !important
 
-  .padding-1-mobile
+.padding-1-mobile
     padding-right: 1rem !important
     padding-left: 1rem !important
 
-  .pt-0-mobile
+.pt-0-mobile
     padding-top: 0
 
-  .pr-0-mobile
+.pr-0-mobile
     padding-right: 0
   
-  .pl-0-mobile
+.pl-0-mobile
     padding-left: 0

@@ -48,13 +48,13 @@ export default (props) => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
               fields {
                 slug
               }
               frontmatter {
                 title
+                description
                 templateKey
                 date(formatString: "DD MMMM, YYYY")
                 featuredpost
