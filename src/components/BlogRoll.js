@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import BackgroundImage from 'gatsby-background-image-es5'
+import { graphql, StaticQuery } from 'gatsby'
+import RollPost from './RollPost'
 
 class BlogRoll extends React.Component {
   render() {
@@ -19,45 +18,7 @@ class BlogRoll extends React.Component {
                 (!includeFeatured && !post.frontmatter.featuredpost)  
               ) {
               return (
-                <div className="is-parent column is-6" key={post.id}>
-                  <Link to={post.fields.slug} className="no-decoration">
-                    <article
-                      className={`card ${
-                        post.frontmatter.featuredpost ? 'is-featured' : ''
-                      }`}
-                    >
-                        <BackgroundImage
-                            Tag="section"
-                            className={"background-image"}
-                            fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
-                        >
-                          <div className="blur blog-roll-content">
-                            {post.frontmatter.featuredimage ? (
-                              <div className="card-image">
-                                <PreviewCompatibleImage
-                                  imageInfo={{
-                                    image: post.frontmatter.featuredimage,
-                                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                                  }}
-                                />
-                              </div>
-                            ) : null}
-                            <div className="card-content">
-                              <p className="title has-text-primary is-size-4">
-                                {post.frontmatter.title}
-                              </p>
-                              <p className="subtitle is-size-5 is-block">
-                                {post.frontmatter.date}
-                              </p>
-                              <p className="m-t-10">
-                                {post.excerpt}
-                              </p>
-                            </div>
-                          </div>
-                        </BackgroundImage>
-                    </article>
-                  </Link>
-                </div>
+                <RollPost post={post} key={post.id}/>
               )
             } else {
               return null
