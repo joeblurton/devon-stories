@@ -71,7 +71,11 @@ export const IndexPageTemplate = ({
                                 </Link>
                             </div>
                             <div className="column is-12">
+                                <h3 className="sunflower-bold is-size-3 ml-2 mb-1">From the Gallery</h3>
                                 <PhotoRoll/>
+                                <Link className="btn no-decoration" to="/photo">
+                                    <button className="button is-primary is-medium">View the full gallery</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
